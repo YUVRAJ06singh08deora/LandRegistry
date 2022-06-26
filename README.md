@@ -20,8 +20,13 @@ The block diagram below represents the correct working of the model. Firstly, in
 
 🔖How to run this application on your system?
  
-📍 Download all the files from The github.<br>
-📍 Open the source code from the link given below <br>
+📍 Open This Link -: <br>
+📍 In order to use the Tezos smart contracts your browser must support cryptographically supported Wallets <br>
+📍 For This project u can use Tezos Temple Wallet(). <br>
+📍 Your Wallet must have some free ithacanet Test net Tokens. <br>
+📍 After Your Wallet Is configured kindly go to Feed Insurance Page from the Home page Then enter all the Details which have been asked <br>
+📍 When u click on submit button it will directly open your Tezos Wallet and will ask you to connect the wallet and then once you connect the wallet with application you need to sign that transaction. <br>
+📍 Whoooo Your Insurance successfully saved on the Blockchain to verify that(For Dev purpose only) you can go to Better call dev and enter the contract address and see all the recent transactions. <br>
 And copy and make a new project on google collaboratory.
 
 💫Link of google collab -: 
