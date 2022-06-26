@@ -29,7 +29,7 @@ The block diagram below represents the correct working of the model. Firstly, in
 📍 Whoooo!! Your Insurance successfully saved on the Blockchain to verify that(For Dev purpose only) you can go to Better call dev and enter the contract address and see all the recent transactions. <br>
 
 ### Video Demonstration -:
-// video link
+https://www.loom.com/share/2d984ff8edeb43db88b9e6dff889e24c
 
 ### 🔑 KEY FEATURES OF THE APP
 - Data is stored on the blockchain network.
