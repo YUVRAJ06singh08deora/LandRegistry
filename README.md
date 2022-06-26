@@ -20,7 +20,7 @@ The block diagram below represents the correct working of the model. Firstly, in
 
 🔖How to run this application on your system?
  
-📍 Open This Link -:https://insurance-brown.vercel.app/
+📍 Open This Link -:https://insurance-brown.vercel.app/<br>
 📍 In order to use the Tezos smart contracts your browser must support cryptographically supported Wallets. <br>
 📍 For this project u can use Tezos Temple Wallet(). <br>
 📍 Your Wallet must have some free ithacanet Test net Tokens. <br>
