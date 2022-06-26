@@ -27,15 +27,6 @@ The block diagram below represents the correct working of the model. Firstly, in
 📍 After Your Wallet Is configured kindly go to Feed Insurance Page from the Home page Then enter all the Details which have been asked <br>
 📍 When u click on submit button it will directly open your Tezos Wallet and will ask you to connect the wallet and then once you connect the wallet with application you need to sign that transaction. <br>
 📍 Whoooo Your Insurance successfully saved on the Blockchain to verify that(For Dev purpose only) you can go to Better call dev and enter the contract address and see all the recent transactions. <br>
-And copy and make a new project on google collaboratory.
-
-💫Link of google collab -: 
-// colab link
-
-📍 Upload the app.py file which you downloaded from the GitHub.<br>
-📍 Go to Runtime  and then select Run all over there.<br>
-📍 In the very last module of the collaboratory you will be able to see the link named “Your web app can be accessed from this link” and a link will be there so then click on the link and hurray your Dapp is running in front of you.<br>
-
 
 ### Video Demonstration -:
 // video link
