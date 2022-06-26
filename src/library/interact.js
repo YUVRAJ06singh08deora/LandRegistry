@@ -1,10 +1,10 @@
 import * as config from "./config.json";
 
-export const update = (Tezos,{time,aid,date,Name_date,loo,qts,Aname,APhoneNumber,Mname,qty,Quality,comment}, setStatus) =>
+export const update = (Tezos,{aadhar,address,annualIncome,dob,empStatus,gender,insurancePlan,name,nationality,phone}, setStatus) =>
   Tezos.wallet
     .at(config.contractAddr)
     .then((contract) => {
-      return contract.methods.default(APhoneNumber,Aname,Mname,Name_date,Quality,aid,comment,date,loo,qts,qty,time).send();
+      return contract.methods.default(aadhar,address,annualIncome,dob,empStatus,gender,insurancePlan,name,nationality,phone).send();
     })
     .then((op) => {
       setStatus(`Awaiting to be confirmed..`);
@@ -54,3 +54,4 @@ export const getValue = (Tezos) =>
     .then((storage) => {
       return storage.toString();
     });
+   

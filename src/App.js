@@ -1,10 +1,10 @@
 import "./App.css";
-
+import * as config from "./library/config.json";
 import React, { useEffect, useState } from "react";
 import { add, getValue, multiply, update } from "./library/interact";
 import { connectWalletBeacon, setup } from "./library/connect";
 
-const App = () => {
+ const App = () => {
   const [Tezos, setTezos] = useState(undefined);
   const [status, setStatus] = useState("No Operations Performed");
   const [value, setValue] = useState(0);
@@ -49,53 +49,48 @@ const App = () => {
   return (
     <div className="App">
       <h1>Get Insured with Chain</h1>
-      {/* {!loader && <div className="value">{value}</div>}
-      {loader && <Loader />} */}
+      {!loader && <div className="value">{value}</div>}
+      {loader && <Loader />}
       <p>Current Value in Storage</p>
+      
       <form
         onSubmit={async (e) => {
           await handleEvent(e, update,
         {
-            time:e.target.time.value,
-            aid : e.target.aid.value,
-            date: e.target.date.value,
-            Name_date:e.target.Name_date.value,
-            loo: e.target.loo.value,
-            qts:e.target.qts.value,
-            Aname:e.target.Aname.value,
-            APhoneNumber: e.target.APhoneNumber.value,
-            Mname: e.target.Mname.value,
-            qty:e.target.qty.value,
-            Quality:e.target.Quality.value,
-            comment:e.target.comment.value,
+            address:e.target.address.value,
+            annualIncome : e.target.annualIncome.value,
+            dob: e.target.dob.value,
+            empStatus:e.target.empStatus.value,
+            gender: e.target.gender.value,
+            insurancePlan:e.target.insurancePlan.value,
+            name:e.target.name.value,
+            nationality: e.target.nationality.value,
+            phone: e.target.phone.value,
+            aadhar: e.target.aadhar.value,
         }
             );
         }}
       >
-        <label>Phonenumber : </label>
-        <input type="number" name="APhoneNumber" step="1" /><br></br>
         <label>Name : </label>
-        <input type="text" name="Aname" step="1" /><br></br>
-        <label>Mineral Name : </label>
-        <input type="text" name="Mname" step="1" /><br></br>
-        <label>Name Date : </label>
-        <input type="text" name="Name_date" step="1" /><br></br>
-        <label>Quality : </label>
-        <input type="text" name="Quality" step="1" /><br></br>
-        <label>Aadhar : </label>
-        <input type="number" name="aid" step="1" /><br></br>
-        <label>Comment : </label>
-        <input type="text" name="comment" step="1" /><br></br>
-        <label>Date : </label>
-        <input type="text" name="date" step="1" /><br></br>
-        <label>Location : </label>
-        <input type="text" name="loo" step="1" /><br></br>
-        <label>Result : </label>
-        <input type="text" name="qts" step="1" /><br></br>
-        <label>Quantity : </label>
-        <input type="text" name="qty" step="1" /><br></br>
-        <label>Time : </label>
-        <input type="text" name="time" step="1" /><br></br>
+        <input type="text" name="name" step="1" /><br></br>
+        <label>Date Of Birth : </label>
+        <input type="text" name="dob" step="1" /><br></br>
+        <label>Gender : </label>
+        <input type="text" name="gender" step="1" /><br></br>
+        <label>Aadhar Number : </label>
+        <input type="number" name="aadhar" step="1" /><br></br>
+        <label> Employement Status : </label>
+        <input type="text" name="empStatus" step="1" /><br></br>
+        <label> Annual Income Status : </label>
+        <input type="text" name="annualIncome" step="1" /><br></br>
+        <label>Insurance Plan : </label>
+        <input type="text" name="insurancePlan" step="1" /><br></br>
+        <label>Nationality : </label>
+        <input type="text" name="nationality" step="1" /><br></br>
+        <label>Address : </label>
+        <input type="text" name="address" step="1" /><br></br>
+        <label>Phone : </label>
+        <input type="text" name="phone" step="1" /><br></br>
         <input type="submit" value="addResourcedata" />
       </form>
       {/* <form
