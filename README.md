@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# INSURE YOUR FUTURE WITH BLOCKCHAIN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📄 Abstract
+Blockchain has the ability to keep an incorruptible, decentralized, and transparent log of all data, makes it a technology rife for security applications. Additionally, while blockchain is transparent it is also private, concealing the identity of any individual with complex and secure codes that can protect the sensitivity of any kind of data. The decentralized nature of the technology also allows people to share the same information quickly and safely.
 
-## Available Scripts
+## 🗒️ Introduction
+The insurance industry has a plenty of problems even though it is well-established and valuable - including inefficiency, fraud, human error and, most concerning of all, cyberattacks. Blockchain’s ability to create trust in a trustless ecosystem through the use of public ledgers and fortified cybersecurity protocols has positive implications for the insurance industry's future growth. In this project, Smart contracts enable blockchain users to transparently transfer anything of value without the interference of a middleman. Like physical contracts, smart contracts stipulate the rules between two parties. Unlike physical contracts, smart contracts can track insurance claims and hold both parties accountable.
 
-In the project directory, you can run:
+### 📚 Tech stack
+- SmartPy(For Smart Contracts)
+- TempleWallet(For the smart Contract Transactions)
+- Google Collaboratory 
+- Pytezos
+- React JS
 
-### `yarn start`
+## ⚙ Working
+The block diagram below represents the correct working of the model. Firstly, input is taken from the users (public or government employess),then the data is saved on the blockchain network and once it is stored on the blockchain network no one can modify that data. And the policy providers can provide the policy according to the inputs given.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/73357138/175800890-aa101453-b870-4a65-a43b-cc3ddbe98b84.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🔖How to run this application on your system?
+ 
+📍 Download all the files from The github.<br>
+📍 Open the source code from the link given below <br>
+And copy and make a new project on google collaboratory.
 
-### `yarn test`
+💫Link of google collab -: 
+// colab link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📍 Upload the app.py file which you downloaded from the GitHub.<br>
+📍 Go to Runtime  and then select Run all over there.<br>
+📍 In the very last module of the collaboratory you will be able to see the link named “Your web app can be accessed from this link” and a link will be there so then click on the link and hurray your Dapp is running in front of you.<br>
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Video Demonstration -:
+// video link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔑 KEY FEATURES OF THE APP
+- Data is stored on the blockchain network.
+- Once the Insurance Records are inserted then no one can modify them.
+- Safe and secure on the Blockchain Network.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🌈 CONCLUSION
+The proposed solution is going to remove all sorts of Unfairness which sometimes done by the stuff in order to manipulate the data.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### FUTURE PROSPECT
+- To make our system more useful and convinient, we plan on adding whole management data inside this blockchain Network.
