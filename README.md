@@ -11,30 +11,27 @@ This project effectively stores the FIR data on the blockchain network nowadays 
 ### 📚 Tech stack
 - SmartPy(For Smart Contracts)
 - TempleWallet(For the smart Contract Transactions)
-- Google Collaboratory 
-- Pytezos
-- Streamlit
+- Taquito
+- React JS
 
 ### ⚙ Working
-The block diagram above represents the correct working of the model in that first it will take input from the Police or person lodging Fir regarding all the data of the FIR and then person or police will input the data and once the data is saved on the blockchain network and once it is stored on the blockchain network no one can modify that data since it is on the blockchain network.
+This app will first take input from the Police or person lodging FIR regarding all the data of the case. Once the data is saved and stored on the blockchain network no one can modify that data since it is on the blockchain network.
 
 🔖How to run this application on your system?
  
-📍 Download all the files from The github.<br>
-📍 Open the source code from the link given below <br>
-And copy and make a new project on google collaboratory.
+📍 Open This Link -:https://satyavachan.vercel.app/<br>
+📍 In order to use the Tezos smart contracts your browser must support cryptographically supported Wallets. <br>
+📍 For this project u can use Tezos Temple Wallet(). <br>
+📍 Your Wallet must have some free ithacanet Test net Tokens. <br>
+📍 After Your Wallet is configured kindly fill the all the necessary details and then click on submit Button.<br>
+📍 When u click on submit button it will directly open your Tezos Wallet and will ask you to connect the wallet and then once you connect the wallet with application you need to sign that transaction. <br>
+📍 Whoooo!! Your Lyrics are successfully saved on the Blockchain to verify that(For Dev purpose only) you can go to Better call dev and enter the contract address and see all the recent transactions. <br>
 
-💫Link of google collab -: https://github.com/YUVRAJ06singh08deora/Blockchain_based_FIR_lodging/blob/main/DecentralizedFir.ipynb<br>
+### Video Demonstration:
 
-📍 Upload the app.py file which you downloaded from the GitHub.<br>
-📍 Go to Runtime  and then select Run all over there.<br>
-📍 In the very last module of the collaboratory you will be able to see the link named “Your web app can be accessed from this link” and a link will be there so then click on the link and hurray your Dapp is running in front of you.<br>
-
-### Video Demonstration
-https://www.loom.com/share/cad87b60fd46417b8d5c24b49c95e7c6
 ### 🔑 KEY FEATURES OF THE APP
 - Data is stored on the blockchain network.
-- Once the Fir Records are inserted then no one can modify them.
+- Once the FIR Records are inserted then no one can modify them.
 - Safe and secure on the Blockchain Network
 
 ### 🌈 CONCLUSION
