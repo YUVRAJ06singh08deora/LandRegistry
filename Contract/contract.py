@@ -1,66 +1,82 @@
 import smartpy as sp
 
-class insuranc(sp.Contract):
+class DFIR(sp.Contract):
     def __init__(self):
         self.init(
-            insureMap = sp.map(),    
+            patientMap = sp.map(),    
         )
         
 
     @sp.entry_point       
-    def addInsuranceData(self, params):
-            aadhar = params.aadhar
-            self.data.insureMap[aadhar] = sp.record(
-            #Date of birth
-            dob = params.dob,
-            #  Name
-            name = params.name,
-            #  Gender
-            gender = params.gender,
-            #Nationality
-            nationality=params.nationality, 
-            #Address
+    def addFir(self, params):
+            uid = params.uid
+            self.data.patientMap[uid] = sp.record(
+            name = params.name, 
+            fathersName=params.fathersName,
+            age = params.age, 
+            gender = params.gender, 
+            PhoneNumber = params.PhoneNumber, 
             address = params.address,
-            # Phone Number
-            phone = params.phone, 
-            #Employement Status
-            empStatus = params.empStatus,
-            #Annual Income
-            annualIncome = params.annualIncome,
-            #insurancePlan
-            insurancePlan= params.insurancePlan,
+            # Place of Occurrence: 
+            # Distance from the police station 
+            DisPs = params.DisPs,
+            #Direction from the police station
+            Dirps=params.Dirps,
+           # Date and Hour of Occurrence: 
+            Date1 = params.Date1,
+            time=params.time,
+            #offence
+            NoO=params.NoO,
+            Section=params.Section,
+            #Particulars of the property
+            pop=params.pop,
+            #  Description of the accused:
+            Doa=params.Doa,
+            #Details of witnesses (if any) 
+            Dow=params.Dow,
+           # Complaint: Briefly lay down the facts regarding the incident reported in an accurate way. 
+            Complaint = params.Complaint,
+            
+            
         )
 
-@sp.add_test(name = "Adding Resource Data")
+@sp.add_test(name = "ADDING FIR ")
 def test():
     scenario = sp.test_scenario()
 
     user = sp.test_account("Test")
     
-    insuranc1 = insuranc()
-    scenario += insuranc1
+    panjikaran1 = DFIR()
+    scenario += panjikaran1
     
-    scenario.h1("Add a new Entry")
-    scenario += insuranc1.addInsuranceData(
-            #aadhar
-            aadhar= 41083197124,
-            #Date of birth
-            dob ="12/07/2002",
-            #  Name
-            name ="Yuvraj Singh Deora",
-            #  Gender
-            gender ="Male",
-            #Nationality
-            nationality="Indian", 
-            #Address
-            address ="Hadmatiya",
-            # Phone Number
-            phone =8976182128, 
-            #Employement Status
-            empStatus ="Employed",
-            #Annual Income
-            annualIncome ="120000",
-            #insurancePlan
-            insurancePlan="Monthly",
+    scenario.h1("Reporting a FIR")
+    scenario += panjikaran1.addFir(
+        uid = "0123456789", 
+        name = "Yuvraj Singh Deora", 
+        fathersName="Samandar Singh",
+        age = 20, 
+        gender = "Male", 
+        PhoneNumber = 6176179619, 
+        address = "Rajput Vas Hadmatiya",
+        # Place of Occurrence: 
+            # Distance from the police station 
+       DisPs = "25km",
+            #Direction from the police station
+            Dirps="North-East",
+           # Date and Hour of Occurrence: 
+            Date1 = "22/10/2021",
+            time="15:00:56",
+            #offence
+            NoO="Murder",
+            Section="IPC-305",
+            #Particulars of the property
+            pop="Samsun S30",
+            #  Description of the accused:
+            Doa="A scar on the face and a religious tatto on the right hand",
+            #Details of witnesses (if any) 
+            Dow="Shankar Prasad ",
+           # Complaint: Briefly lay down the facts regarding the incident reported in an accurate way. 
+            Complaint = "A man came from the van and suddenly attacked the lady who was nearby jogging on the road and again ran towaeds the car and got disappeared."
          
     )
+    # scenario.show(vaxScene.balance)

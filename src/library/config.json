@@ -1,6 +1,6 @@
 {
-  "name": "insurance",
-  "network": "ithacanet",
-  "rpc": "https://ithacanet.smartpy.io",
-  "contractAddr": "KT1VovazJmARpEUPv2HZ7BjJVo2gyTYwDTsy"
+  "name": "FIRSatyavachan",
+  "network": "jakartanet",
+  "rpc": "https://jakartanet.smartpy.io",
+  "contractAddr": "KT19jQuCLHi4HPpD98X5LAbE93M5UdUrtSaZ"
 }

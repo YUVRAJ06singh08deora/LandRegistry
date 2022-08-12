@@ -3,13 +3,71 @@ import * as config from "./library/config.json";
 import React, { useEffect, useState } from "react";
 import { add, getValue, multiply, update } from "./library/interact";
 import { connectWalletBeacon, setup } from "./library/connect";
+import { useForm } from "react-hook-form";
+import styled from "styled-components";
+const Styles = styled.div`
+ background: lavender;
+ padding: 20px;
 
+ h1 {
+   border-bottom: 1px solid white;
+   color: #3d3d3d;
+   font-family: sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 24px;
+   padding: 10px;
+   text-align: center;
+ }
+
+ form {
+   background: white;
+   border: 1px solid #dedede;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin: 0 auto;
+   max-width: 500px;
+   padding: 30px 50px;
+ }
+
+ input {
+   border: 1px solid #d9d9d9;
+   border-radius: 4px;
+   box-sizing: border-box;
+   padding: 10px;
+   width: 100%;
+ }
+
+ label {
+   color: #3d3d3d;
+   display: block;
+   font-family: sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   margin-bottom: 5px;
+ }
+
+ .error {
+   color: red;
+   font-family: sans-serif;
+   font-size: 12px;
+   height: 30px;
+ }
+
+ .submitButton {
+   background-color: #6976d9;
+   color: white;
+   font-family: sans-serif;
+   font-size: 14px;
+   margin: 20px 0px;
+`;
  const App = () => {
   const [Tezos, setTezos] = useState(undefined);
   const [status, setStatus] = useState("No Operations Performed");
   const [value, setValue] = useState(0);
   const [loader, setLoader] = useState(true);
-
+  const { register, handleSubmit } = useForm();
   useEffect(() => {
     console.log("run");
     setup().then(setTezos).catch(console.error);
@@ -48,51 +106,70 @@ import { connectWalletBeacon, setup } from "./library/connect";
 
   return (
     <div className="App">
-      <h1>Get Insured with Chain</h1>
-      {!loader && <div className="value">{value}</div>}
-      {loader && <Loader />}
-      <p>Current Value in Storage</p>
-      
+     <h1>Satyavachan</h1>
+      <Styles>
       <form
         onSubmit={async (e) => {
           await handleEvent(e, update,
         {
-            address:e.target.address.value,
-            annualIncome : e.target.annualIncome.value,
-            dob: e.target.dob.value,
-            empStatus:e.target.empStatus.value,
-            gender: e.target.gender.value,
-            insurancePlan:e.target.insurancePlan.value,
-            name:e.target.name.value,
-            nationality: e.target.nationality.value,
-            phone: e.target.phone.value,
-            aadhar: e.target.aadhar.value,
+          Complaint:e.target.Complaint.value,
+          Date1: e.target.Date1.value,
+          Dirps:e.target.Dirps.value,
+          DisPs: e.target.DisPs.value,
+          Doa:e.target.Doa.value,
+          Dow:e.target.Dow.value,
+          NoO: e.target.NoO.value,
+          PhoneNumber: e.target.PhoneNumber.value,
+          Section: e.target.Section.value,
+          address: e.target.address.value,
+          age: e.target.age.value,
+          fathersName: e.target.fathersName.value,
+          gender: e.target.gender.value,
+          name: e.target.name.value,
+          pop: e.target.pop.value,
+          time: e.target.time.value,
+          uid: e.target.uid.value,
         }
             );
         }}
       >
         <label>Name : </label>
         <input type="text" name="name" step="1" /><br></br>
-        <label>Date Of Birth : </label>
-        <input type="text" name="dob" step="1" /><br></br>
+        <label>Fathers Name : </label>
+        <input type="text" name="fathersName" step="1" /><br></br>
         <label>Gender : </label>
         <input type="text" name="gender" step="1" /><br></br>
         <label>Aadhar Number : </label>
-        <input type="number" name="aadhar" step="1" /><br></br>
-        <label> Employement Status : </label>
-        <input type="text" name="empStatus" step="1" /><br></br>
-        <label> Annual Income Status : </label>
-        <input type="text" name="annualIncome" step="1" /><br></br>
-        <label>Insurance Plan : </label>
-        <input type="text" name="insurancePlan" step="1" /><br></br>
-        <label>Nationality : </label>
-        <input type="text" name="nationality" step="1" /><br></br>
+        <input type="number" name="uid" step="1" /><br></br>
+        <label> Age : </label>
+        <input type="number" name="age" step="1" /><br></br>
+        <label>Phone : </label>
+        <input type="number" name="PhoneNumber" step="1" /><br></br>
+        <label> Distance from police station where accident occurred : </label>
+        <input type="text" name="DisPs" step="1" /><br></br>
+        <label>Direction from police station where accident occurred : </label>
+        <input type="text" name="Dirps" step="1" /><br></br>
         <label>Address : </label>
         <input type="text" name="address" step="1" /><br></br>
-        <label>Phone : </label>
-        <input type="text" name="phone" step="1" /><br></br>
-        <input type="submit" value="addResourcedata" />
+        <label>Date of Offence : </label>
+        <input type="text" name="Date1" step="1" /><br></br>
+        <label>Time of Offence: </label>
+        <input type="text" name="time" step="1" /><br></br>
+        <label>Nature of Offence : </label>
+        <input type="text" name="NoO" step="1" /><br></br>
+        <label>Section Applicable : </label>
+        <input type="text" name="Section" step="1" /><br></br>
+        <label>Particulars of the property : </label>
+        <input type="text" name="pop" step="1" /><br></br>
+        <label>Description of the Accused : </label>
+        <input type="text" name="Doa" step="1" /><br></br>
+        <label>Description of Witness : </label>
+        <input type="text" name="Dow" step="1" /><br></br>
+        <label>Complaint : </label>
+        <input type="text" name="Complaint" step="1" /><br></br>
+        <input type="submit" value="submit" />
       </form>
+      </Styles>
       {/* <form
         onSubmit={async (e) => {
           await handleEvent(e, multiply, e.target.mul.value);

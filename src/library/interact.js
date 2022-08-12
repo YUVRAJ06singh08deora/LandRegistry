@@ -1,10 +1,10 @@
 import * as config from "./config.json";
 
-export const update = (Tezos,{aadhar,address,annualIncome,dob,empStatus,gender,insurancePlan,name,nationality,phone}, setStatus) =>
+export const update = (Tezos,{Complaint,Date1,Dirps,DisPs,Doa,Dow,NoO,PhoneNumber,Section,address,age,fathersName,gender,name,pop,time,uid}, setStatus) =>
   Tezos.wallet
     .at(config.contractAddr)
     .then((contract) => {
-      return contract.methods.default(aadhar,address,annualIncome,dob,empStatus,gender,insurancePlan,name,nationality,phone).send();
+      return contract.methods.default(Complaint,Date1,Dirps,DisPs,Doa,Dow,NoO,PhoneNumber,Section,address,age,fathersName,gender,name,pop,time,uid).send();
     })
     .then((op) => {
       setStatus(`Awaiting to be confirmed..`);
@@ -12,7 +12,7 @@ export const update = (Tezos,{aadhar,address,annualIncome,dob,empStatus,gender,i
     })
     .then((hash) =>
       setStatus(
-        `Operation injected: <a target="#" href="https://ithacanet.tzkt.io/${hash}">check here</a>`
+        `Operation injected: <a target="#" href="https://jakartanet.smartpy.io/${hash}">check here</a>`
       )
     );
 
