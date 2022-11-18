@@ -1,6 +1,6 @@
 {
-  "name": "FIRSatyavachan",
-  "network": "jakartanet",
-  "rpc": "https://jakartanet.smartpy.io",
-  "contractAddr": "KT19jQuCLHi4HPpD98X5LAbE93M5UdUrtSaZ"
+  "name": "LandRegistry",
+  "network": "ghostnet",
+  "rpc": "https://ghostnet.smartpy.io",
+  "contractAddr": "KT1GCn5BhGeR4oGHkiwXtqwsejCBMaLhLBfR"
 }

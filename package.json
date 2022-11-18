@@ -5,6 +5,8 @@
   "dependencies": {
     "@taquito/beacon-wallet": "^10.0.0",
     "@taquito/taquito": "^10.0.0",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
     "install": "^0.13.0",
     "npm": "^7.20.5",
     "react": "^16.14.0",

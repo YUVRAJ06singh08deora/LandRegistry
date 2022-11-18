@@ -5,6 +5,18 @@ import { add, getValue, multiply, update } from "./library/interact";
 import { connectWalletBeacon, setup } from "./library/connect";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import AES from 'crypto-js/aes';
+import Utf8 from 'crypto-js/enc-utf8';
+// const encryptWithAES = (text, passphrase) => {
+//   return AES.encrypt(text, passphrase).toString();
+// };
+
+// const decryptWithAES = (ciphertext, passphrase) => {
+//   const bytes = AES.decrypt(ciphertext, passphrase);
+//   const originalText = bytes.toString(Utf8);
+//   return originalText;
+// };
+ 
 const Styles = styled.div`
  background: lavender;
  padding: 20px;
@@ -106,29 +118,26 @@ const Styles = styled.div`
 
   return (
     <div className="App">
-     <h1>Satyavachan</h1>
+     <h1>Land Registry Using Blockchain</h1>
       <Styles>
       <form
         onSubmit={async (e) => {
           await handleEvent(e, update,
         {
-          Complaint:e.target.Complaint.value,
-          Date1: e.target.Date1.value,
-          Dirps:e.target.Dirps.value,
-          DisPs: e.target.DisPs.value,
-          Doa:e.target.Doa.value,
-          Dow:e.target.Dow.value,
-          NoO: e.target.NoO.value,
-          PhoneNumber: e.target.PhoneNumber.value,
-          Section: e.target.Section.value,
-          address: e.target.address.value,
-          age: e.target.age.value,
-          fathersName: e.target.fathersName.value,
+          link: e.target.link.value,
+          lno:e.target.lno.value,
           gender: e.target.gender.value,
           name: e.target.name.value,
-          pop: e.target.pop.value,
-          time: e.target.time.value,
-          uid: e.target.uid.value,
+          rate: e.target.rate.value,
+          time:e.target.time.value,
+          uid:e.target.uid.value,
+          PhoneNumber: e.target.PhoneNumber.value,
+          address: e.target.address.value,
+          Date1:e.target.Date1.value,
+          comments: e.target.comments.value,
+          fathersName: e.target.fathersName.value,
+          age: e.target.age.value,
+          area: e.target.area.value,
         }
             );
         }}
@@ -145,28 +154,23 @@ const Styles = styled.div`
         <input type="number" name="age" step="1" /><br></br>
         <label>Phone : </label>
         <input type="number" name="PhoneNumber" step="1" /><br></br>
-        <label> Distance from police station where accident occurred : </label>
-        <input type="text" name="DisPs" step="1" /><br></br>
-        <label>Direction from police station where accident occurred : </label>
-        <input type="text" name="Dirps" step="1" /><br></br>
+        <b>Enter the land Property Details</b>
+        <label> Land no./ Khasra No. :</label>
+        <input type="text" name="lno" step="1" /><br></br>
+        <label>Area in sqms : </label>
+        <input type="text" name="area" step="1" /><br></br>
         <label>Address : </label>
         <input type="text" name="address" step="1" /><br></br>
-        <label>Date of Offence : </label>
+        <label>Date of Registry : </label>
         <input type="text" name="Date1" step="1" /><br></br>
-        <label>Time of Offence: </label>
+        <label>Time of Registry : </label>
         <input type="text" name="time" step="1" /><br></br>
-        <label>Nature of Offence : </label>
-        <input type="text" name="NoO" step="1" /><br></br>
-        <label>Section Applicable : </label>
-        <input type="text" name="Section" step="1" /><br></br>
-        <label>Particulars of the property : </label>
-        <input type="text" name="pop" step="1" /><br></br>
-        <label>Description of the Accused : </label>
-        <input type="text" name="Doa" step="1" /><br></br>
-        <label>Description of Witness : </label>
-        <input type="text" name="Dow" step="1" /><br></br>
-        <label>Complaint : </label>
-        <input type="text" name="Complaint" step="1" /><br></br>
+        <label>Rate per sqm of Land : </label>
+        <input type="text" name="rate" step="1" /><br></br>
+        <label>Link to document containing Satellite Map image of land : </label>
+        <input type="text" name="link" step="1" /><br></br>
+        <label>Comments : </label>
+        <input type="text" name="comments" step="1" /><br></br>
         <input type="submit" value="submit" />
       </form>
       </Styles>
